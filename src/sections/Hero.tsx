@@ -33,7 +33,7 @@ export const Hero = () => {
       {/*Bg*/}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.jpg"
+          src="/portfolio_react_ts/hero-bg.jpg"
           alt="Hero image"
           className="w-full h-full opacity-40 "
         />
@@ -151,7 +151,7 @@ export const Hero = () => {
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src="/portfolio_react_ts/profile-photo.jpg"
                   alt="Ali Zahir Al-Saygh profile"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
