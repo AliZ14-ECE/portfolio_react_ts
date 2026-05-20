@@ -24,13 +24,45 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}>
+    <header
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}
+    >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="text-2xl font-bold tracking-tight hover:text-primary"
         >
-          AZ<span className="text-primary">.</span>
+          {/* Animated Heading name*/}
+          <div className="inline-flex items-center font-medium text-4xl uppercase">
+            {/* The First Name / Initial */}
+            <span>A</span>
+            <span
+              className={`inline-block transition-all duration-300 ease-in-out overflow-hidden ${
+                isScrolled ? "max-w-0 opacity-0" : "max-w-[100px] opacity-100"
+              }`}
+            >
+              li
+            </span>
+
+            {/* The Last Name / Initial */}
+            <span className="text-primary inline-flex">
+              <span>&nbsp;Z</span>
+              <span
+                className={`inline-block transition-all duration-300 ease-in-out overflow-hidden ${
+                  isScrolled ? "max-w-[10px] opacity-100" : "max-w-0 opacity-0"
+                }`}
+              >
+                .
+              </span>
+              <span
+                className={`inline-block transition-all duration-300 ease-in-out overflow-hidden ${
+                  isScrolled ? "max-w-0 opacity-0" : "max-w-[100px] opacity-100"
+                }`}
+              >
+                aher
+              </span>
+            </span>
+          </div>
         </a>
 
         {/*Desktop Nav*/}
@@ -50,7 +82,9 @@ export const Navbar = () => {
 
         {/* CTA Button*/}
         <div className="hidden md:block">
-          <Button size="sm">nlfds</Button>
+          <Button size="sm">
+            <a href="#contacts">Let's Talk</a>
+          </Button>
         </div>
 
         {/* Mobile Menu Button*/}
@@ -71,11 +105,17 @@ export const Navbar = () => {
                 key={index}
                 href={link.href}
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               >
                 {link.label}
               </a>
             ))}
-            <Button size="sm">nlfds</Button>
+            <Button
+              size="sm"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            >
+              <a href="#contacts">Let's Talk</a>
+            </Button>
           </div>
         </div>
       )}

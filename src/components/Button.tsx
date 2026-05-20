@@ -1,17 +1,38 @@
-export const Button = ({children, className, size = "md"}: {children: React.ReactNode, className?:string, size?: "sm" | "md" | "lg"}) =>{
-    const baseClasses = "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25";
-    
-    const sizeClasses={
-        sm:"px-4 py-2 text-sm", 
-        md: "px-6 py-3 text-base",
-        lg: "px-8 py-5 text-lg",
-    };
-    const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
-    return (
-        <button className={classes}>
-            <span className= "relative flex items-center justify-center gap-2">
-                {children}
-            </span>
-        </button>
-    )
+import React from 'react';
+
+// 1. Define types for your custom properties
+interface ButtonCustomProps {
+  size?: 'sm' | 'md' | 'lg';
+  children: React.ReactNode;
+}
+
+// 2. Merge your custom types with ALL standard HTML button attributes
+type ButtonProps = ButtonCustomProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const Button = ({
+  className = "",
+  size = "md",
+  children,
+  ...props // <-- TypeScript now tracks exactly what is inside here!
+}: ButtonProps) => { // <-- Apply the types here
+
+  const baseClasses =
+    "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25";
+
+  const sizeClasses = {
+    sm: "px-4 py-2 text-sm",
+    md: "px-6 py-3 text-base",
+    lg: "px-8 py-5 text-lg",
+  };
+
+  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+
+  return (
+    // 3. Cleanly forward type-safe props to the underlying HTML element
+    <button className={classes} {...props}>
+      <span className="relative flex items-center justify-center gap-2">
+        {children}
+      </span>
+    </button>
+  );
 };
