@@ -1,13 +1,12 @@
 import { Button } from "../components/Button";
-import { ArrowRight, ChevronDown, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download, Mail} from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-import { BsGithub, BsGlobe, BsLinkedin } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const socialMediaList = [
   { icon: BsGithub, href: "https://github.com/AliZ14-ECE" },
   { icon: BsLinkedin, href: "https://www.linkedin.com/in/ali-zaher-63a236184/" },
-  { icon: MdEmail, href: "mailto:ali.alobadye@gmail.com" },
+  { icon: Mail, href: "mailto:ali.alobadye@gmail.com" },
 ];
 
 const skills = [
