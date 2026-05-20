@@ -5,24 +5,24 @@ const highlights = [
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing maintainable, scalable code with clear architecture and standards.",
   },
   {
     icon: Rocket,
     title: "Performance",
     description:
-      "Oprimizing for speed and delivering lightning-fast user experience.",
+      "Optimizing for speed, reliability, and delightful user experience.",
   },
   {
     icon: Users,
     title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    description: "Partnering with teams to plan, build, and deliver quality.",
   },
   {
     icon: Lightbulb,
-    title: "Collaboration",
+    title: "Problem Solving",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Turning complex requirements into practical, user-friendly solutions.",
   },
 ];
 
@@ -36,7 +36,7 @@ export const About = () => {
           <div className="space-y-8">
             <div className="animate-fade-in">
               <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                Aout Me
+                About Me
               </span>
             </div>
 
@@ -50,22 +50,21 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I&#39;m a motivated engineer with a strong programming foundation
+                and hands-on experience across quality control, software
+                development, and data analysis. I enjoy building solutions that
+                improve processes and create measurable impact.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                My focus is on frontend and mobile development with React,
+                Next.js, Flutter, and TypeScript, backed by solid backend and
+                database experience. I care about clean UX, maintainable
+                architectures, and shipping reliable features.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                I&#39;m based in Najaf, Iraq, and I&#39;m always eager to learn new
+                technologies, solve tough problems, and collaborate on impactful
+                products.
               </p>
             </div>
 
@@ -81,7 +80,11 @@ export const About = () => {
           {/* Right Column (for lg screens) - Highlights*/}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, idx) => (
-              <div key={idx} className={`glass p-6 rounded-2xl animate-fade-in animation-delay-${1+idx}00`}>
+              <div
+                key={idx}
+                className="glass p-6 rounded-2xl animate-fade-in"
+                style={{ animationDelay: `${(idx + 1) * 100}ms` }}
+              >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
                   <item.icon className="w-6 h-6 text-primary"/>
                 </div>

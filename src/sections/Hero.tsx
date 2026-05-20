@@ -1,31 +1,30 @@
-import { __unstable__loadDesignSystem } from "tailwindcss";
 import { Button } from "../components/Button";
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-import { BsGithub, BsLinkedin, BsX } from "react-icons/bs";
+import { BsGithub, BsGlobe, BsLinkedin } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 const socialMediaList = [
-  { icon: BsGithub, href: "#" },
-  { icon: BsLinkedin, href: "#" },
-  { icon: BsX, href: "#" },
+  { icon: BsGithub, href: "https://github.com/AliZ14-ECE" },
+  { icon: BsLinkedin, href: "https://www.linkedin.com/in/ali-zaher-63a236184/" },
+  { icon: MdEmail, href: "mailto:ali.alobadye@gmail.com" },
 ];
 
 const skills = [
   "React",
   "Next.js",
-  "JavaScript",
   "TypeScript",
   "Flutter",
   "Dart",
   "Python",
-  "Django",
+  "Golang",
   "PostgreSQL",
-  "Docker",
+  "Power BI",
   "Tailwind CSS",
   "Algorithms",
   "Problem Solving",
   "Git",
-  "GitHub Actions",
+  "GitHub",
 ];
 
 export const Hero = () => {
@@ -67,7 +66,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 me-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • front-end developer
+                Software Engineer • Frontend & Mobile
               </span>
             </div>
 
@@ -79,12 +78,12 @@ export const Hero = () => {
                   animationDelay: `${animationDelayBaseline}ms`,
                 }}
               >
-                Crafting <span className="text-primary glow-text">digital</span>
+                Building <span className="text-primary glow-text">reliable</span>
                 <br />
-                experiences with
+                digital products with
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  care and clarity.
                 </span>
               </h1>
 
@@ -94,10 +93,10 @@ export const Hero = () => {
                   animationDelay: `${animationDelayBaseline * 2}ms`,
                 }}
               >
-                Hi, I'm Ali Zaher - a software engineer specializeing in
-                front-end and mobile development; mainly Flutter, React, and
-                Next.js. I build scalable, performant web applications. I have
-                greate problem solving skills.
+                Hi, I'm Ali Zahir Al-Saygh, a software engineer based in Najaf,
+                Iraq. I build performant web and mobile experiences with React,
+                Next.js, Flutter, and TypeScript, and I enjoy turning complex
+                requirements into clean, reliable software.
               </p>
             </div>
 
@@ -109,13 +108,18 @@ export const Hero = () => {
               }}
             >
               <Button size="lg">
-                Contact Me <ArrowRight className="2-5 h-5" />
+                <a className="inline-flex items-center" href="#contacts">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                  </a>
               </Button>
 
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                as="a"
+                href="mailto:ali.alobadye@gmail.com?subject=Resume%20Request"
+              >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Download className="w-5 h-5" />
-                  download
+                  Download Resume
                 </span>
               </AnimatedBorderButton>
             </div>
@@ -132,9 +136,9 @@ export const Hero = () => {
                 Follow me on:{" "}
               </span>
               {socialMediaList.map((social, idx) => (
-                <a key={idx} href={social.href}>
+                <a key={idx} href={social.href} target="_blank" rel="noreferrer">
                   {
-                    <social.icon className="w-10 h-10 p-2 rounded-full glass hover:bgprimary/10 hover:text-primary transition-all duration-300" />
+                    <social.icon className="w-10 h-10 p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300" />
                   }
                 </a>
               ))}
@@ -149,7 +153,7 @@ export const Hero = () => {
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/profile-photo.jpg"
-                  alt="Ali Zaher profile photo"
+                  alt="Ali Zahir Al-Saygh profile"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
                 {/*Floating Badge*/}
@@ -158,7 +162,7 @@ export const Hero = () => {
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
 
                     <span className="text-sm font-medium">
-                      Available for work
+                      Available for job opportunities
                     </span>
                   </div>
                 </div>
@@ -174,7 +178,7 @@ export const Hero = () => {
           </p>
           <div className="relative overflow-hidden">
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l\ from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-background to-transparent z-10" />
             <div className="flex animate-marquee">
               {skills.map((skill, idx) => (
                 <div key={idx} className="shrink-0 px-8 py-4">
