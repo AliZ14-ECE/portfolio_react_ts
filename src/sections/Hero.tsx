@@ -114,7 +114,8 @@ export const Hero = () => {
 
               <AnimatedBorderButton
                 as="a"
-                href="mailto:ali.alobadye@gmail.com?subject=Resume%20Request"
+                href="/portfolio_react_ts/Ali-Zahir-Al-Saygh-Resume.pdf"
+                download="Ali-Zahir-Al-Saygh-Resume.pdf"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   <Download className="w-5 h-5" />

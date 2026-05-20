@@ -20,9 +20,9 @@ const contactItems = [
         href: "https://github.com/AliZ14-ECE",
     },
     {
-        label: "Portfolio",
-        value: "aliz14-ece.github.io/portolio_nextjs",
-        href: "https://aliz14-ece.github.io/portolio_nextjs",
+        label: "LinkedIn",
+        value: "ali-zaher-63a236184/",
+        href: "https://www.linkedin.com/in/ali-zaher-63a236184/",
     },
 ];
 

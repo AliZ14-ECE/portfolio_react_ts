@@ -6,6 +6,7 @@ type AnimatedBorderButtonProps = {
   href?: string;
   target?: string;
   rel?: string;
+  download?: string;
   type?: "button" | "submit" | "reset";
 };
 
@@ -15,6 +16,7 @@ export const AnimatedBorderButton = ({
   href,
   target,
   rel,
+  download,
   type = "button",
 }: AnimatedBorderButtonProps) => {
   const classes =
@@ -46,7 +48,13 @@ export const AnimatedBorderButton = ({
 
   if (as === "a") {
     return (
-      <a className={classes} href={href} target={target} rel={rel}>
+      <a
+        className={classes}
+        href={href}
+        target={target}
+        rel={rel}
+        download={download}
+      >
         {content}
       </a>
     );
